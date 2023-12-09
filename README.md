@@ -3,7 +3,7 @@
 ## Important links:
 * Live link:[Live](https://bistro-boss-fe0bb.web.app/)
 * Client Repository:[Client-side](https://github.com/istiakahmedsarker/Knowledge-hub-client)
-* Server Repository:[Server-side]()
+* Server Repository:[Server-side](https://github.com/istiakahmedsarker/Knowledge-hub-server)
 
 ## Assignment Creation:
 * Any logged-in user can create an assignment for all users.
