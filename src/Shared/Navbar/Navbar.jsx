@@ -1,34 +1,41 @@
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
-const Menus = () => {
 
-    const links = ['Home', 'All Assignments page','Create Assignment','All Submitted Assignments','My Assignment Page'];
+const Menus = () => {
+    const links = ['Home', 'Courses', 'About Us', 'Contact', 'My Assignment Page'];
+
     return (
         <>
-            {
-                links.map(link => <li key={link}>
-                    <Link to={`/${link}`} className="btn btn-sm  btn-ghost">{link}</Link>
-                </li>)
-            }
+            {links.map((link) => (
+                <li key={link} className="menu-item">
+                    <Link
+                        to={`/${link}`}
+                        className="btn btn-sm bg-[#2980b9] hover:bg-[#1f6697]  text-[#ecf0f1] hover:text-[#ffffff] border-none focus:border-none shadow-none"
+                    >
+                        {link}
+                    </Link>
+                </li>
+            ))}
         </>
-    )
-}
+    );
+};
+
 const Navbar = () => {
     const { user, logOut } = useAuth()
     return (
         <>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-[#2980b9] ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-base-100 rounded-box w-52">
                             <Menus />
                         </ul>
                     </div>
                     <Link to="/" className="font-bold normal-case text-3xl">
-                        <div className="flex items-center">
+                        <div className="flex items-center bg-[#2980b9] text-[#ecf0f1] hover:text-[#ffffff] ">
                             <label tabIndex={0} className="btn btn-ghost btn-circle avatar" title={user?.displayName}>
                                 <div className="w-10 rounded-full">
                                     <img src="https://i.ibb.co/ZXJ4v5T/clearoff.jpg" alt="User Avatar" />
@@ -67,7 +74,7 @@ const Navbar = () => {
                             </div>
                             :
                             <Link to='/login'>
-                                <button className="btn btn-sm  btn-ghost">Login</button>
+                                <button className="btn btn-sm btn-ghost bg-[#2980b9] hover:bg-[#1f6697]  text-[#ecf0f1] hover:text-[#ffffff]">Login</button>
                             </Link>
                     }
                 </div>

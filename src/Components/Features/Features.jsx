@@ -1,44 +1,53 @@
 import React from 'react';
 
-const Features = () => {
-    const features = [
+const FeaturedCourses = () => {
+    // Dummy data for featured courses (replace with your actual data)
+    const featuredCourses = [
         {
             id: 1,
-            title: 'Assignment Submission',
-            description: 'Description for Feature 1...',
+            title: 'Web Development Fundamentals',
+            description: 'Learn the basics of HTML, CSS, and JavaScript.',
+            imageUrl: 'course-image-1.jpg', // Replace with actual image URL
+            price: 49.99,
         },
         {
             id: 2,
-            title: 'Assignment Grading',
-            description: 'Enable instructors to efficiently grade assignments and provide feedback.',
+            title: 'Advanced React Techniques',
+            description: 'Master advanced concepts and best practices in React.',
+            imageUrl: 'course-image-2.jpg', // Replace with actual image URL
+            price: 79.99,
         },
         {
             id: 3,
-            title: 'Multi-User Support',
-            description: 'Facilitate collaboration among students and educators in group projects or study groups.',
-        },
-        {
-            id: 4,
-            title: 'Mobile Compatibility',
-            description: 'Ensure seamless access to the platform from various devices for on-the-go learning.',
+            title: 'Data Science for Beginners',
+            description: 'Explore the world of data science with hands-on projects.',
+            imageUrl: 'course-image-3.jpg', // Replace with actual image URL
+            price: 64.99,
         },
     ];
 
     return (
-        <section className="py-8">
-            <div className="container mx-auto">
-                <h2 className="text-3xl font-bold mb-4 text-center">Features</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {features.map(feature => (
-                        <div key={feature.id} className="bg-white shadow-md p-6 rounded-md">
-                            <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                            <p>{feature.description}</p>
+        <div className="container mx-auto my-10">
+            <h2 className="text-3xl font-bold mb-8 text-center">Featured Courses</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {featuredCourses.map(course => (
+                    <div key={course.id} className="bg-white rounded-md shadow-md overflow-hidden">
+                        <img src={course.imageUrl} alt={course.title} className="w-full h-40 object-cover" />
+                        <div className="p-4">
+                            <h3 className="text-xl font-bold mb-2">{course.title}</h3>
+                            <p className="text-gray-600 mb-4">{course.description}</p>
+                            <div className="flex justify-between items-center">
+                                <span className="text-lg font-bold">${course.price}</span>
+                                <button className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">
+                                    Enroll Now
+                                </button>
+                            </div>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
-        </section>
+        </div>
     );
 };
 
-export default Features;
+export default FeaturedCourses;
