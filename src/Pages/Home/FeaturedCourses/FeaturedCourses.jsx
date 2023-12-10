@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FeaturedCourses = () => {
     // Dummy data for featured courses (replace with your actual data)
@@ -38,13 +39,20 @@ const FeaturedCourses = () => {
                             <p className="text-gray-600 mb-4">{course.description}</p>
                             <div className="flex justify-between items-center">
                                 <span className="text-lg font-bold">${course.price}</span>
-                                <button className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">
+                                <button className="bg-green-500 text-white font-medium px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">
                                     Enroll Now
                                 </button>
                             </div>
                         </div>
                     </div>
                 ))}
+            </div>
+            <div className="flex justify-center mt-8">
+                <Link to="/Courses">
+                    <button className="bg-green-500 text-white font-medium px-6 py-3 rounded-full hover:bg-green-600 transition duration-300">
+                        Discover Courses
+                    </button>
+                </Link>
             </div>
         </div>
     );
