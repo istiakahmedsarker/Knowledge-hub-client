@@ -6,6 +6,9 @@ Welcome to an extraordinary learning platform where students can excel in their 
 ## Technologies Used:
 Tailwind CSS for a stylish and responsive design, ReactJS for a dynamic user interface, Express for a robust backend, Axios for efficient server communication, Firebase for secure authentication, and MongoDB for reliable data storage.
 
+* Why should you buy it?
+Your go-to platform for seamless assignment management and interactive learning. Tailwind CSS, ReactJS, Express, Axios, Firebase, and MongoDB come together for a top-notch educational experience.
+
 ## Features:
 * The ability for students to create, update, and delete assignments, providing flexibility in organizing coursework.
 Interactive Marking System:
