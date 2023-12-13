@@ -6,6 +6,13 @@ Welcome to an extraordinary learning platform where students can excel in their 
 ## Technologies Used:
 Tailwind CSS for a stylish and responsive design, ReactJS for a dynamic user interface, Express for a robust backend, Axios for efficient server communication, Firebase for secure authentication, and MongoDB for reliable data storage.
 
+## Features:
+* The ability for students to create, update, and delete assignments, providing flexibility in organizing coursework.
+Interactive Marking System:
+* A user-friendly feature that streamlines assignment evaluation, offering insightful feedback for an enhanced learning experience.
+Submission History and Tracking:
+* A unique functionality allowing users to access a detailed record of submitted assignments, promoting accountability and facilitating progress tracking.
+
 ## Important links:
 * Live link:[Live](https://bistro-boss-fe0bb.web.app/)
 * Client Repository:[Client-side](https://github.com/istiakahmedsarker/Knowledge-hub-client)
